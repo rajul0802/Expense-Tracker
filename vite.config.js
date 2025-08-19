@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Expense-tracker/', // set to your repo/subfolder name
+  base: './', // set to your repo/subfolder name
 })
 

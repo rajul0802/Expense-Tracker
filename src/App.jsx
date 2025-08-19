@@ -217,8 +217,15 @@ function App() {
               onChange={(e) => setFormState(s => ({ ...s, date: e.target.value }))}
             />
           </div>
-          <div className="form-actions">
-            <button type="submit">{isEditing ? 'Save' : 'Add'}</button>
+          <div className="form-actions ">
+           <button
+  style={{ backgroundColor: '#212121', color: '#fff' }}
+  className="font-semibold py-2 px-4 rounded"
+  type="submit"
+>
+  {isEditing ? 'Save' : 'Add'}
+</button>
+
             {isEditing ? (
               <button type="button" className="secondary" onClick={resetForm}>Cancel</button>
             ) : (
@@ -284,8 +291,8 @@ function App() {
                     <td><span className="category-pill">{expense.category}</span></td>
                     <td className="num">{formatAmount(expense.amount)}</td>
                     <td className="actions">
-                      <button className="small" onClick={() => handleEdit(expense)}>Edit</button>
-                      <button className="small danger" onClick={() => handleDelete(expense.id)}>Delete</button>
+                      <button style={{ backgroundColor: '#212121', color: '#fff' }} className="small" onClick={() => handleEdit(expense)}>Edit</button>
+                      <button style={{ backgroundColor: '#212121', color: '#fff' }} className="small danger" onClick={() => handleDelete(expense.id)}>Delete</button>
                     </td>
                   </tr>
                 ))}
